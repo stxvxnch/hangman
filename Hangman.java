@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Hangman{
      public static String[] words = {"ant", "baboon", "badger", "bat", "bear", "beaver", "camel",
     "cat", "clam", "cobra", "cougar", "coyote", "crow", "deer",
@@ -67,6 +69,10 @@ public class Hangman{
 
     public static void main(String[] args) {
 
+        Scanner scan = new Scanner(System.in);
+        
+        String word = words[randomNumber()];
+        System.out.println(word);
     }
 
     /**
@@ -76,7 +82,8 @@ public class Hangman{
      * generates a randomNumber between 0-63
      */
     public static int randomNumber() {
-
+        int randomNumber = (int) (Math.random() * 64);
+        return randomNumber;
 
     }
 }
